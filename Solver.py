@@ -36,6 +36,8 @@ class Solver:
             collinear = [].append(i)
             use_index[i] = True
             for j in range(i + 1, lines_count):
+                if use_index[j]:
+                    continue
                 if self.lines[i][0][0] * self.lines[j][1][1] == self.lines[i][0][1] * self.lines[j][1][0]:
                     collinear.append(j)
                     use_index[j] = True
