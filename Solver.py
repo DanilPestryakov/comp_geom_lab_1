@@ -4,7 +4,7 @@ class Solver:
         self.output_file = output_file
         self.points = []
         self.lines = []
-        self.is_collinear = []
+        self.collinear = {}
 
     def solve(self):
         self.__read_points_from_file()
@@ -28,11 +28,19 @@ class Solver:
 
     def __get_collinear(self):
         lines_count = len(self.lines)
+        type_number = 0
+        use_index = [False for i in range(lines_count)]
         for i in range(lines_count):
+            if use_index[i]:
+                continue
+            collinear = [].append(i)
+            use_index[i] = True
             for j in range(i + 1, lines_count):
                 if self.lines[i][0][0] * self.lines[j][1][1] == self.lines[i][0][1] * self.lines[j][1][0]:
-                    self.is_collinear.append((i, j))
-        self.is_collinear = tuple(self.is_collinear)
+                    collinear.append(j)
+                    use_index[j] = True
+            self.collinear[type_number] = collinear
+            type_number += 1
 
     def __sort_collinear(self):
         return None
