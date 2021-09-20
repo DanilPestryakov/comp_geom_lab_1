@@ -3,7 +3,6 @@ import argparse
 from Solver import Solver
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Find lines with more then three points")
     parser.add_argument('-i', '--input', help='File with input points')
@@ -11,5 +10,5 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    solver = Solver(args.input)
+    solver = Solver(args.input, args.output)
     solver.solve()
