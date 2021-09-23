@@ -4,14 +4,12 @@ from Solver import Solver
 
 
 if __name__ == '__main__':
-    # parser = argparse.ArgumentParser(description="Find lines with more then three points")
-    # parser.add_argument('-i', '--input', help='File with input points')
-    # parser.add_argument('-o', '--output', help='File with output lines')
-    #
-    # args = parser.parse_args()
+    parser = argparse.ArgumentParser(description="Find lines with more then three points")
+    parser.add_argument('-i', '--input', help='File with input points')
+    parser.add_argument('-o', '--output', help='File with output lines')
 
-    #solver = Solver(args.input, args.output)
-    solver = Solver('input.txt', 'output.txt')
+    args = parser.parse_args()
+
+    solver = Solver(args.input, args.output)
     solver.solve()
 
-    # нужно проверить, почему некоторые прямые разделились на две!

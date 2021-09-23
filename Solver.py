@@ -170,7 +170,7 @@ class Solver:
                                           f'{self.points[self.lines_group_by_angle[i][line_num][0]]} '
                                           f'{self.points[self.lines_group_by_angle[i][line_num][1]]} ')
                         is_used.add(self.points[self.lines_group_by_angle[i][line_num][0]])
-                        is_used.add(self.points[self.lines_group_by_angle[i][line_num][0]])
+                        is_used.add(self.points[self.lines_group_by_angle[i][line_num][1]])
                         is_need_print_first = False
                     if self.points[self.lines_group_by_angle[i][j][0]] not in is_used:
                         output_file.write(f'{self.points[self.lines_group_by_angle[i][j][0]]} ')
