@@ -6,4 +6,4 @@ git clone https://github.com/DanilPestryakov/comp_geom_lab_1.git -b two_sorts_co
 
 ## How to launch
 
-python main.py -i input.txt -o output.txt
+python3 main.py -i input.txt -o output.txt
